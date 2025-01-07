@@ -76,8 +76,9 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 
 ## Setup
 1. Clone the repository and navigate to the project directory.
-    https://github.com/Charlesuwaje/Banking-Application.git
    ```  
+    https://github.com/Charlesuwaje/Banking-Application.git
+    
 2. Create a `.env` file in the project root and set the necessary environment variables such as mailing provider.
 3. Run the database migrations:
    ```bash
