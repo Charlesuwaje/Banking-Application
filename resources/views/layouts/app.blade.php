@@ -7,7 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <script  src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.js"></script>
-
+    <script src="https://js.pusher.com/7.0/pusher.min.js"></script>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -25,6 +25,9 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('wallet.transfer.form') }}">Transfer</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('chat.index') }}">Customer care</a>
                     </li>
                         <li class="nav-item">
                             <form method="POST" action="{{ route('logout') }}">

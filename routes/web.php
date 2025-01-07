@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\ChatController;
 use App\Http\Controllers\WalletController;
 /*
 |--------------------------------------------------------------------------
@@ -42,4 +43,9 @@ Route::middleware(['auth'])->group(function () {
     Route::post('/wallet/deposit', [WalletController::class, 'deposit'])->name('wallet.deposit');
     Route::post('/wallet/withdraw', [WalletController::class, 'withdraw'])->name('wallet.withdraw');
     Route::post('/wallet/transfer', [WalletController::class, 'transfer'])->name('wallet.transfer');
+    // Route::get('/chat', [ChatController::class, 'index'])->name('chat.index');
+    // Route::post('/chat/send', [ChatController::class, 'sendMessage'])->name('chat.send');
+    Route::get('/chat', [ChatController::class, 'index'])->name('chat.index');
+Route::post('/chat/send', [ChatController::class, 'send'])->name('chat.send');
+Route::get('/chat/messages', [ChatController::class, 'fetchMessages'])->name('chat.fetch');
 });
