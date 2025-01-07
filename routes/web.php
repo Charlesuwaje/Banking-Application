@@ -36,7 +36,6 @@ Route::middleware(['auth'])->group(function () {
     Route::post('/logout', [LoginController::class, 'destroy'])->name('logout');
     Route::get('/wallet', [WalletController::class, 'show'])->name('wallet.show');
     // Route::post('/fetch-user-name', [WalletController::class, 'fetchUserName'])->name('fetch.user.name');
-
     Route::get('/users/{accountNumber}', [WalletController::class, 'getUserByAccountNumber']);
     Route::get('/wallet/withdraw', [WalletController::class, 'showWithdrawForm'])->name('wallet.withdraw.form');
     Route::get('/wallet/transfer', [WalletController::class, 'showTransferForm'])->name('wallet.transfer.form');
