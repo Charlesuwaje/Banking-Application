@@ -86,18 +86,27 @@
             });
             container.scrollTop = container.scrollHeight;
         }
-        
+
         document.getElementById('chat-form').addEventListener('submit', async (e) => {
             e.preventDefault();
             const form = new FormData(e.target);
 
-            const response = await fetch('{{ route('chat.send') }}', {
+            // const response = await fetch('{{ route('chat.send') }}', {
+            //     method: 'POST',
+            //     headers: {
+            //         'X-CSRF-TOKEN': '{{ csrf_token() }}'
+            //     },
+            //     body: form
+            // });
+
+            const response = await fetch('/chat/send', {
                 method: 'POST',
                 headers: {
                     'X-CSRF-TOKEN': '{{ csrf_token() }}'
                 },
                 body: form
             });
+
 
             if (response.ok) {
                 e.target.reset();

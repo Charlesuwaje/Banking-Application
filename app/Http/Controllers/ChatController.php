@@ -48,6 +48,8 @@ class ChatController extends Controller
         $message = Message::create($data);
 
         return response()->json(['message' => $message], 200);
+        // return redirect()->route('chat.index')->with('success', 'Transfer successful.');
+
     }
 
 
