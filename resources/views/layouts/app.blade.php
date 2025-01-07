@@ -12,7 +12,7 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
-            <a class="navbar-brand" href="{{ route('wallet.show') }}">WalletApp</a>
+            <a class="navbar-brand" href="{{ route('wallet.show') }}">Charles uwaje WalletApp </a>
             <div class="collapse navbar-collapse">
                 <ul class="navbar-nav ms-auto">
                     @auth
