@@ -61,7 +61,9 @@ class WalletController extends Controller
 
         try {
             $this->walletService->withdraw(auth()->id(), $request->amount);
-            return redirect()->back()->with('success', 'Withdrawal successful.');
+            // return redirect()->back()->with('success', 'Withdrawal successful.');
+            return redirect()->route('wallet.withdraw.form')->with('success', 'Withdrawal successful.');
+
         } catch (\RuntimeException $e) {
             return redirect()->back()->withErrors(['amount' => $e->getMessage()]);
         }
@@ -91,7 +93,8 @@ class WalletController extends Controller
 
         try {
             $this->walletService->transfer(auth()->id(), $toUser->id, $request->amount);
-            return redirect()->back()->with('success', 'Transfer successful.');
+            // return redirect()->back()->with('success', 'Transfer successful.');
+            return redirect()->route('wallet.transfer.form')->with('success', 'Transfer successful.');
         } catch (\RuntimeException $e) {
             return redirect()->back()->withErrors(['amount' => $e->getMessage()]);
         }
