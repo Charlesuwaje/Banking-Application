@@ -41,7 +41,8 @@ class WalletController extends Controller
 
         $this->walletService->deposit($request->account_number, $request->amount);
 
-        return redirect()->back()->with('success', 'Deposit successful.');
+        // return redirect()->back()->with('success', 'Deposit successful.');
+        return redirect()->route('wallet.show')->with('success', 'Deposit successful.');
     }
 
 
