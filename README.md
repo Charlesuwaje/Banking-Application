@@ -64,3 +64,28 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+# Banking application 
+
+## Features
+- Deposit
+- Withdraw
+- Transfer
+- View Balance
+- View Transactions
+
+## Setup
+1. Clone the repository and navigate to the project directory.
+
+   ```  
+2. Create a `.env` file in the project root and set the necessary environment variables such as mailing provider.
+3. Run the database migrations:
+   ```bash
+   php artisan migrate
+   ```
+4. Start the development server:
+   ```bash
+   php artisan serve
+   ```
+5. Open your web browser and visit `http://localhost:8000` to access the task manager.
+<!-- 6. This is a hosted link to visit and see what the app is all about cheers `https://task-management-production-5f77.up.railway.app/user-tasks-projects`. -->
