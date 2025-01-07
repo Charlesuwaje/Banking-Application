@@ -48,7 +48,7 @@
                                 @foreach ($banks as $bank)
                                     <div class="me-2">
                                         {{-- <img src="{{ asset('storage/' . $bank->logo) }}" alt="{{ $bank->name }}" width="50" class="rounded"> --}}
-                                        <img src="{{ asset($bank->logo) }}" alt="{{ $bank->name }}" width="50" class="rounded">
+                                        <img src="{{ asset($bank->logo) }}" alt="{{ $bank->name }}" width="23" class="rounded">
 
                                     </div>
                                 @endforeach

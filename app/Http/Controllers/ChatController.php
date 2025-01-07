@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Events\MessageSent;
 use App\Models\Message;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -46,7 +47,8 @@ class ChatController extends Controller
         }
 
         $message = Message::create($data);
-
+        // event(new MessageSent($message));
+        broadcast(new MessageSent($message))->toOthers();
         return response()->json(['message' => $message], 200);
         // return redirect()->route('chat.index')->with('success', 'Transfer successful.');
 

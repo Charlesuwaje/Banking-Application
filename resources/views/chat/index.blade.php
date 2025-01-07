@@ -114,7 +114,14 @@
             }
         });
 
-        setInterval(fetchMessages, 1000000);
-        // setInterval(fetchMessages, 3000); 
+        // setInterval(fetchMessages, 1000000);
+        // setInterval(fetchMessages, 3000);  
+        setInterval(() => {
+    fetch('{{ route('chat.fetch') }}')
+        .then(response => response.json())
+        .then(data => {
+            console.log(data);
+        });
+}, 5000); 
     </script>
 @endsection
