@@ -134,7 +134,8 @@
             e.preventDefault();
             const form = new FormData(e.target);
 
-            const response = await fetch('{{ route('chat.send') }}', {
+            // const response = await fetch('{{ route('chat.send') }}', {
+                const response = await fetch('/chat/send', {
                 method: 'POST',
                 headers: {
                     'X-CSRF-TOKEN': '{{ csrf_token() }}'
@@ -149,5 +150,6 @@
         });
 
         setInterval(fetchMessages, 10000000);
+        // setInterval(fetchMessages, 3000);
     </script>
 @endsection
