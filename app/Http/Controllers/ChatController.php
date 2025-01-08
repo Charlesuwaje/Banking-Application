@@ -64,6 +64,32 @@ class ChatController extends Controller
         return response()->json($messages);
     }
 
+    // public function fetchMessages(Request $request)
+    // {
+    //     // Validate the receiver_id
+    //     $receiverId = $request->query('receiver_id');
+    //     if (!$receiverId) {
+    //         return response()->json(['error' => 'Receiver ID is required'], 400);
+    //     }
+
+    //     $messages = Message::with('user')
+    //         ->where(function ($query) use ($receiverId) {
+    //             $query->where('user_id', auth()->id())
+    //                   ->where('receiver_id', $receiverId);
+    //         })
+    //         ->orWhere(function ($query) use ($receiverId) {
+    //             $query->where('user_id', $receiverId)
+    //                   ->where('receiver_id', auth()->id());
+    //         })
+    //         ->latest()
+    //         ->take(50)
+    //         ->get()
+    //         ->reverse();
+
+    //     return response()->json($messages);
+    // }
+
+
     public function getUsers()
     {
         $users = User::where('id', '!=', auth()->id())

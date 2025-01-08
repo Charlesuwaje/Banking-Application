@@ -81,6 +81,8 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 -   User Logout
 -   User Dashboard
 - Customer care (Chatting system.)
+- Bidding Sysytem
+- PayStack Integration
 
 ## Setup
 
